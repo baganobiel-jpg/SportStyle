@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Catálogo completo SportStyle: camisas de time, tênis, casacos, bonés e streetwear.">
+<meta name="theme-color" content="#0a0a0c">
+<title>Catálogo | SportStyle</title>
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23e01f1f'/%3E%3Ctext x='50' y='68' font-size='58' font-weight='800' font-family='sans-serif' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+
+<a href="#conteudo" class="skip-link">Ir para o conteúdo</a>
+
+<header class="header">
+  <div class="logo">
+    <a href="index.html">SPORTSTYLE</a>
+  </div>
+
+  <form class="search-form" id="search-form" role="search">
+    <input type="text" id="search-input" placeholder="Buscar produtos..." aria-label="Buscar produtos">
+    <button type="submit" aria-label="Buscar">🔍</button>
+  </form>
+
+  <nav class="menu" aria-label="Menu principal">
+    <a href="index.html">Início</a>
+    <a href="masculino.html">Catálogo</a>
+    <a href="carrinho.html">
+      Carrinho
+      <span id="cart-count">0</span>
+    </a>
+  </nav>
+
+  <div id="user-slot"></div>
+</header>
+
+<main class="products-page" id="conteudo">
+
+  <div class="catalog-banner">
+    <h1 id="banner-titulo">Nova Coleção 2026</h1>
+    <p>Estilo, conforto e performance.</p>
+  </div>
+
+  <div class="filtros-bar">
+    <input type="text" id="filtro-busca" placeholder="Buscar por nome, marca ou cor..." aria-label="Buscar no catálogo">
+
+    <select id="filtro-categoria" aria-label="Categoria">
+      <option value="todas">Todas as categorias</option>
+      <option value="camisas-time">Camisas de Time</option>
+      <option value="camisas">Camisas</option>
+      <option value="conjuntos">Conjuntos</option>
+      <option value="calcas">Calças & Bermudas</option>
+      <option value="casacos">Casacos</option>
+      <option value="tenis">Tênis</option>
+      <option value="bones">Bonés</option>
+      <option value="acessorios">Acessórios</option>
+    </select>
+
+    <select id="filtro-marca" aria-label="Marca">
+      <option value="todas">Todas as marcas</option>
+    </select>
+
+    <select id="filtro-preco" aria-label="Faixa de preço">
+      <option value="todas">Qualquer preço</option>
+      <option value="0-100">Até R$ 100</option>
+      <option value="100-200">R$ 100 a R$ 200</option>
+      <option value="200-350">R$ 200 a R$ 350</option>
+      <option value="350-500">R$ 350 a R$ 500</option>
+    </select>
+
+    <select id="filtro-ordenar" aria-label="Ordenar por">
+      <option value="relevancia">Relevância</option>
+      <option value="menor-preco">Menor preço</option>
+      <option value="maior-preco">Maior preço</option>
+      <option value="mais-avaliados">Mais avaliados</option>
+    </select>
+
+    <button type="button" class="btn-limpar" id="btn-limpar">Limpar filtros</button>
+
+    <span id="contador-resultados" role="status" aria-live="polite"></span>
+  </div>
+
+  <div id="catalogo-grid" class="product-grid"></div>
+
+  <div class="load-more">
+    <button type="button" class="btn btn-ghost" id="btn-mais" style="display:none;">Ver mais produtos</button>
+  </div>
+
+</main>
+
+<footer>
+  <h3>SPORTSTYLE</h3>
+  <p class="footer-links">
+    <a href="index.html">Início</a>
+    <a href="masculino.html">Catálogo</a>
+    <a href="carrinho.html">Carrinho</a>
+    <a href="login.html">Minha conta</a>
+  </p>
+  <p>Moda premium para todos os estilos. © 2026 Todos os direitos reservados.</p>
+</footer>
+
+<script src="js/produtos.js"></script>
+<script src="js/carrinho.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/busca.js"></script>
+<script src="js/animacoes.js"></script>
+
+</body>
+</html>

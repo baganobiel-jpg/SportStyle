@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SportStyle: streetwear, sneakers e camisas de seleção. Nike, Adidas, Puma, Asics, Corteiz, Denim Tears e mais.">
+<meta name="theme-color" content="#0a0a0c">
+<title>SportStyle | Streetwear & Sneakers</title>
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23e01f1f'/%3E%3Ctext x='50' y='68' font-size='58' font-weight='800' font-family='sans-serif' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+
+<a href="#conteudo" class="skip-link">Ir para o conteúdo</a>
+
+<header class="header">
+  <div class="logo">
+    <a href="index.html">SPORTSTYLE</a>
+  </div>
+
+  <form class="search-form" id="search-form" role="search">
+    <input type="text" id="search-input" placeholder="Buscar produtos..." aria-label="Buscar produtos">
+    <button type="submit" aria-label="Buscar">🔍</button>
+  </form>
+
+  <nav class="menu" aria-label="Menu principal">
+    <a href="index.html">Início</a>
+    <a href="masculino.html">Catálogo</a>
+    <a href="carrinho.html">
+      Carrinho
+      <span id="cart-count">0</span>
+    </a>
+  </nav>
+
+  <div id="user-slot"></div>
+</header>
+
+<main id="conteudo">
+
+<!-- ===== HERO SLIDESHOW ===== -->
+<section class="hero hero-slideshow" id="hero-slideshow" aria-label="Destaques da coleção">
+
+  <div class="hero-slides" aria-hidden="true">
+    <div class="hero-slide active" style="background-image:url('https://acdn-us.mitiendanube.com/stores/001/874/769/products/08c4b529-5181-4045-8401-b03f81c8c08a-7d3a8ea22d4867987e17563263983165-1024-1024.webp')"></div>
+    <div class="hero-slide" style="background-image:url('https://acdn-us.mitiendanube.com/stores/003/134/751/products/0762c762531bfcef590e5d479aee487f-5be7212b589fa9376317817256005052-480-0.webp')"></div>
+    <div class="hero-slide" style="background-image:url('https://acdn-us.mitiendanube.com/stores/003/134/751/products/75345320fb84fb3a040cb1fa9562153a-dad0a5aafd77c2639217770868831940-1024-1024.webp')"></div>
+    <div class="hero-slide" style="background-image:url('https://acdn-us.mitiendanube.com/stores/003/134/751/products/c71f32e854cbe503a3994e8f0cecfb9c-d670c5bfeb0f8eeb4717710975997852-1024-1024.webp')"></div>
+  </div>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-inner">
+    <div class="hero-text">
+      <span class="eyebrow">Coleção 2026</span>
+      <h1>VESTE O<br><em>SEU ESTILO</em></h1>
+      <p>Streetwear, sneakers e camisas de seleção escolhidos a dedo para quem vive o jogo dentro e fora de quadra.</p>
+      <div class="hero-ctas">
+        <a href="masculino.html" class="btn">Ver Catálogo</a>
+        <a href="masculino.html?categoria=tenis" class="btn btn-ghost">Explorar Tênis</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-dots">
+    <button type="button" class="hero-dot active" data-index="0" aria-label="Slide 1"></button>
+    <button type="button" class="hero-dot" data-index="1" aria-label="Slide 2"></button>
+    <button type="button" class="hero-dot" data-index="2" aria-label="Slide 3"></button>
+    <button type="button" class="hero-dot" data-index="3" aria-label="Slide 4"></button>
+  </div>
+
+</section>
+
+<!-- ===== ESTEIRA DE MARCAS ===== -->
+<section class="marquee-section" aria-label="Marcas disponíveis na loja">
+  <div class="marquee-track" id="marquee-track"></div>
+</section>
+
+<!-- ===== CATEGORIAS EM DESTAQUE ===== -->
+<section class="categorias-home">
+  <div class="section-head reveal">
+    <div>
+      <span class="eyebrow-line">Explore o catálogo</span>
+      <h2>Compre por Categoria</h2>
+    </div>
+    <a href="masculino.html" class="ver-tudo">Ver tudo →</a>
+  </div>
+
+  <div class="cats-grid reveal">
+    <a href="masculino.html?categoria=camisas-time" class="cat-card">
+      <img src="https://acdn-us.mitiendanube.com/stores/003/134/751/products/0762c762531bfcef590e5d479aee487f-5be7212b589fa9376317817256005052-480-0.webp" alt="Camisas" loading="lazy" onerror="imgFallback(this)">
+      <div class="cat-overlay">
+        <span>Nova Coleção</span>
+        <h3>Camisas de Time</h3>
+        <p>Seleções e clubes do Brasil e do mundo</p>
+        <span class="cat-arrow">Ver camisas →</span>
+      </div>
+    </a>
+
+    <a href="masculino.html?categoria=casacos" class="cat-card">
+      <img src="https://acdn-us.mitiendanube.com/stores/001/874/769/products/08c4b529-5181-4045-8401-b03f81c8c08a-7d3a8ea22d4867987e17563263983165-1024-1024.webp" alt="Casacos" loading="lazy" onerror="imgFallback(this)">
+      <div class="cat-overlay">
+        <span>Destaque</span>
+        <h3>Casacos</h3>
+        <p>Tommy, Corteiz, Denim Tears e mais</p>
+        <span class="cat-arrow">Ver casacos →</span>
+      </div>
+    </a>
+
+    <a href="masculino.html?categoria=tenis" class="cat-card">
+      <img src="https://acdn-us.mitiendanube.com/stores/003/134/751/products/75345320fb84fb3a040cb1fa9562153a-dad0a5aafd77c2639217770868831940-1024-1024.webp" alt="Tênis" loading="lazy" onerror="imgFallback(this)">
+      <div class="cat-overlay">
+        <span>Top Vendas</span>
+        <h3>Tênis</h3>
+        <p>Nike, Asics, Adidas e Puma</p>
+        <span class="cat-arrow">Ver tênis →</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ===== EM DESTAQUE ===== -->
+<section class="featured">
+  <div class="section-head reveal">
+    <div>
+      <span class="eyebrow-line">Selecionados pra você</span>
+      <h2>Em Destaque</h2>
+    </div>
+    <a href="masculino.html" class="ver-tudo">Ver catálogo completo →</a>
+  </div>
+
+  <div class="products reveal" id="destaques-grid"></div>
+</section>
+
+<!-- ===== BANNER EDITORIAL ===== -->
+<section class="editorial-banner reveal">
+  <div class="editorial-inner">
+    <div class="editorial-content">
+      <span class="eyebrow-line">Streetwear 2026</span>
+      <h2>A CULTURA<br>NA SUA ROUPA</h2>
+      <p>Corteiz, Syna World, Denim Tears. As marcas que ditam o ritmo da rua chegaram no SportStyle.</p>
+      <a href="masculino.html?marca=Corteiz" class="btn">Ver Corteiz</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SNEAKERS ===== -->
+<section class="featured featured-sem-topo">
+  <div class="section-head reveal">
+    <div>
+      <span class="eyebrow-line">Mais vendidos</span>
+      <h2>Sneakers da Temporada</h2>
+    </div>
+    <a href="masculino.html?categoria=tenis" class="ver-tudo">Ver todos os tênis →</a>
+  </div>
+
+  <div class="products reveal" id="tenis-grid"></div>
+</section>
+
+<!-- ===== MARCAS EM DESTAQUE ===== -->
+<section class="marcas-home">
+  <div class="section-head reveal">
+    <div>
+      <span class="eyebrow-line">Nosso portfólio</span>
+      <h2>Marcas no Catálogo</h2>
+    </div>
+  </div>
+
+  <div class="marcas-grid reveal" id="marcas-grid"></div>
+</section>
+
+<!-- ===== BENEFÍCIOS ===== -->
+<section class="beneficios-section">
+  <div class="section-head reveal">
+    <div>
+      <span class="eyebrow-line">Por que a SportStyle</span>
+      <h2>Feito pra quem joga de verdade</h2>
+    </div>
+  </div>
+
+  <div class="beneficios-grid reveal">
+    <div class="beneficio-card">
+      <span class="num">⚽</span>
+      <h3>Futebol</h3>
+      <p>Camisas de seleções e clubes do Brasil e do mundo, além de retrôs inesquecíveis.</p>
+    </div>
+    <div class="beneficio-card">
+      <span class="num">👟</span>
+      <h3>Sneakers</h3>
+      <p>Os tênis mais desejados da cultura urbana, de Nike a Asics Gel NYC, em um único catálogo.</p>
+    </div>
+    <div class="beneficio-card">
+      <span class="num">🔥</span>
+      <h3>Streetwear</h3>
+      <p>Corteiz, Syna World, Denim Tears — as tendências que dominam o cenário mundial.</p>
+    </div>
+    <div class="beneficio-card">
+      <span class="num">🚚</span>
+      <h3>Entrega</h3>
+      <p>Entrega para todo o Brasil, frete grátis em compras acima de R$ 299,90 e troca em até 30 dias.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="stats reveal" aria-label="A loja em números">
+  <div>
+    <h2 id="stat-produtos">150+</h2>
+    <p>Produtos</p>
+  </div>
+  <div>
+    <h2 id="stat-marcas">14</h2>
+    <p>Marcas</p>
+  </div>
+  <div>
+    <h2 id="stat-nota">4,6★</h2>
+    <p>Nota média</p>
+  </div>
+  <div>
+    <h2>30</h2>
+    <p>Dias para trocar</p>
+  </div>
+</section>
+
+<!-- ===== NEWSLETTER ===== -->
+<section class="newsletter-section reveal">
+  <div class="newsletter-inner">
+    <div class="newsletter-text">
+      <h2>Fique por dentro das novidades</h2>
+      <p>Novos drops, lançamentos e ofertas exclusivas direto pra você.</p>
+    </div>
+    <div>
+      <form class="newsletter-form" id="newsletter-form" novalidate>
+        <input type="email" id="newsletter-email" placeholder="Seu melhor e-mail" aria-label="Seu e-mail" required>
+        <button class="btn" type="submit">Quero receber</button>
+      </form>
+      <p class="newsletter-msg" id="newsletter-msg" role="status"></p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <h3>SPORTSTYLE</h3>
+  <p class="footer-links">
+    <a href="index.html">Início</a>
+    <a href="masculino.html">Catálogo</a>
+    <a href="carrinho.html">Carrinho</a>
+    <a href="login.html">Minha conta</a>
+  </p>
+  <p>Moda, futebol e streetwear em um só lugar. © 2026 Todos os direitos reservados.</p>
+</footer>
+
+<script src="js/produtos.js"></script>
+<script src="js/carrinho.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/busca.js"></script>
+<script src="js/animacoes.js"></script>
+
+<script>
+  /* Esteira de marcas */
+  const marcasEsteira = getMarcasDisponiveis();
+  const marqueeHTML = marcasEsteira.map(marca => `
+    <a href="masculino.html?marca=${encodeURIComponent(marca)}" class="marquee-item">
+      <span class="dot"></span>${esc(marca)}
+    </a>
+  `).join("");
+  document.getElementById("marquee-track").innerHTML = marqueeHTML + marqueeHTML;
+
+  /* Destaques e sneakers (escolhidos por ID, não por posição na lista) */
+  const pegar = (ids) => ids.map(getProdutoPorId).filter(Boolean);
+  renderizarProdutos(pegar([1, 53, 70, 113]), "destaques-grid");
+  renderizarProdutos(pegar([73, 135, 34, 30]), "tenis-grid");
+
+  /* Grid de marcas */
+  const contagem = {};
+  todosProdutos.forEach(p => { contagem[p.marca] = (contagem[p.marca] || 0) + 1; });
+  const marcasDestaque = ["Nike", "Lacoste", "Corteiz", "Syna World", "Asics", "Denim Tears", "Tommy Hilfiger", "Adidas"];
+  const marcasGrid = document.getElementById("marcas-grid");
+  if (marcasGrid) {
+    marcasGrid.innerHTML = marcasDestaque.map(nome => {
+      const qtd = contagem[nome] || 0;
+      return `
+        <a href="masculino.html?marca=${encodeURIComponent(nome)}" class="marca-card">
+          <span class="marca-nome">${esc(nome)}</span>
+          <span class="marca-qtd">${qtd} produto${qtd !== 1 ? "s" : ""}</span>
+          <span class="marca-seta">→</span>
+        </a>`;
+    }).join("");
+  }
+
+  /* Estatísticas calculadas a partir do catálogo real */
+  const totalAvaliacoes = todosProdutos.reduce((s, p) => s + p.avaliacoes, 0);
+  const notaMedia = todosProdutos.reduce((s, p) => s + p.rating * p.avaliacoes, 0) / totalAvaliacoes;
+  document.getElementById("stat-produtos").textContent = (Math.floor(todosProdutos.length / 10) * 10) + "+";
+  document.getElementById("stat-marcas").textContent = Object.keys(contagem).length;
+  document.getElementById("stat-nota").textContent = notaMedia.toFixed(1).replace(".", ",") + "★";
+
+  /* Newsletter */
+  document.getElementById("newsletter-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const campo = document.getElementById("newsletter-email");
+    const msg = document.getElementById("newsletter-msg");
+    const email = campo.value.trim().toLowerCase();
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+      msg.textContent = "Digite um e-mail válido.";
+      msg.className = "newsletter-msg erro";
+      return;
+    }
+
+    const lista = lerStorage("newsletter", []);
+    if (!lista.includes(email)) {
+      lista.push(email);
+      salvarStorage("newsletter", lista);
+    }
+    msg.textContent = "Pronto! Você vai receber nossas novidades.";
+    msg.className = "newsletter-msg sucesso";
+    campo.value = "";
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Revise os itens do seu carrinho e finalize a compra na SportStyle.">
+<meta name="theme-color" content="#0a0a0c">
+<title>Carrinho | SportStyle</title>
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23e01f1f'/%3E%3Ctext x='50' y='68' font-size='58' font-weight='800' font-family='sans-serif' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+
+<a href="#conteudo" class="skip-link">Ir para o conteúdo</a>
+
+<header class="header">
+  <div class="logo">
+    <a href="index.html">SPORTSTYLE</a>
+  </div>
+
+  <form class="search-form" id="search-form" role="search">
+    <input type="text" id="search-input" placeholder="Buscar produtos..." aria-label="Buscar produtos">
+    <button type="submit" aria-label="Buscar">🔍</button>
+  </form>
+
+  <nav class="menu" aria-label="Menu principal">
+    <a href="index.html">Início</a>
+    <a href="masculino.html">Catálogo</a>
+    <a href="carrinho.html">
+      Carrinho
+      <span id="cart-count">0</span>
+    </a>
+  </nav>
+
+  <div id="user-slot"></div>
+</header>
+
+<main class="cart-container" id="conteudo">
+  <h1 class="cart-title">Meu Carrinho</h1>
+
+  <div id="lista-carrinho"></div>
+
+  <div class="cupom-box">
+    <label for="cupom-input">Cupom de desconto</label>
+    <div class="cupom-form">
+      <input type="text" id="cupom-input" placeholder="Ex: SPORT10" autocomplete="off">
+      <button type="button" onclick="aplicarCupom()">Aplicar</button>
+    </div>
+    <p class="cupom-msg" id="cupom-msg" role="status"></p>
+    <div class="cupom-ativo" id="cupom-ativo"></div>
+  </div>
+
+  <div class="cart-summary">
+    <div class="summary-linha">
+      <span>Subtotal</span>
+      <span id="subtotal">R$ 0,00</span>
+    </div>
+
+    <div class="summary-linha desconto" id="linha-desconto" style="display:none;">
+      <span>Desconto</span>
+      <span id="desconto-valor">− R$ 0,00</span>
+    </div>
+
+    <div class="summary-linha">
+      <span>Frete</span>
+      <span id="frete-valor">R$ 0,00</span>
+    </div>
+
+    <div class="frete-progresso" aria-hidden="true"><div class="frete-barra" id="frete-barra"></div></div>
+    <p class="frete-aviso" id="frete-aviso"></p>
+
+    <div class="cart-total">
+      Total: <span id="total">R$ 0,00</span>
+    </div>
+
+    <button type="button" class="checkout-btn" onclick="finalizarCompra()">Finalizar Compra</button>
+  </div>
+</main>
+
+<footer>
+  <h3>SPORTSTYLE</h3>
+  <p class="footer-links">
+    <a href="index.html">Início</a>
+    <a href="masculino.html">Catálogo</a>
+    <a href="carrinho.html">Carrinho</a>
+    <a href="login.html">Minha conta</a>
+  </p>
+  <p>Moda premium para quem busca estilo e conforto. © 2026 Todos os direitos reservados.</p>
+</footer>
+
+<!-- Modal de confirmação de pedido -->
+<div class="modal-overlay" id="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+  <div class="modal-box">
+    <div class="modal-icon">✓</div>
+    <h2 id="modal-titulo">Pedido Confirmado!</h2>
+    <p>Seu pedido foi recebido com sucesso.</p>
+    <p>Número do pedido:</p>
+    <p class="pedido-numero" id="numero-pedido">SP000000</p>
+    <button type="button" class="btn" onclick="fecharModalCheckout()">Voltar à Loja</button>
+  </div>
+</div>
+
+<script src="js/produtos.js"></script>
+<script src="js/carrinho.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/busca.js"></script>
+<script src="js/animacoes.js"></script>
+
+<script>
+  carregarCarrinho();
+</script>
+
+</body>
+</html>
